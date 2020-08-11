@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To-do App</title>
+    <link rel="stylesheet" href="sass/style.css" />
+  </head>
+  <body>
+    <!--To-Do List-->
+    <div class="todo-list">
+      <!--List-->
+      <ul class="list">
+  
+      </ul>
+      <!--List-->
+
+      <p class="no-tasks-message">Your list is empty</p>
+      <input
+        class="input"
+        type="text"
+        placeholder="It should be at least 3 characters"
+      />
+      <button class="add-btn" type="submit">Add</button>
+    </div>
+
+    <!--Template-->
+    <template id="task-template">
+      <li class="list-item">
+        <label class="label-wrap">
+          <input class="checkbox" type="checkbox" />
+          <span></span>
+        </label>
+        <div class="delete-btn">x</div>
+      </li>
+    </template>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
