@@ -16,7 +16,7 @@ const removeOnEvent = function (collection, btnSelector, event) {
   });
 };
 
-     // adding new element to the list
+// adding new element to the list
 addBtn.addEventListener("click", function () {
   const taskTemplate = document.querySelector("#task-template").content;
   const newItemTemplate = taskTemplate.querySelector(".list-item");

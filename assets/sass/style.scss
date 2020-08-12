@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap");
 
-// phone
+// media queries
 $mobile-end: 480px;
 $tablet-start: 481px;
 $tablet-end: 768px;
@@ -10,13 +10,13 @@ $laptop-start: 1025px;
 $laptop-end: 1600px;
 $desktop-start: 1601px;
 
+//reset
 * {
-  //reset
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-//mixin
+//mixins
 @mixin flex($justify-content, $align-items, $wrap: nowrap) {
   display: flex;
   flex-wrap: $wrap;
@@ -144,5 +144,38 @@ body {
 
   &:active {
     transform: scale(1.1);
+  }
+}
+
+@media only screen and (max-width: $mobile-end) {
+  :root {
+    font-size: 11px;
+  }
+  .todo-list {
+    width: 85%;
+    height: 80%;
+  }
+  .input {
+    max-width: 76%;
+    width: auto;
+    padding-left: 5px;
+  }
+}
+@media (min-width: $tablet-start) and (max-width: $tablet-end) {
+  :root {
+    font-size: 13px;
+  }
+  .todo-list {
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (min-width: $tablet-landscape-start) and (max-width: $tablet-landscape-end) {
+  :root {
+    font-size: 13px;
+  }
+  .todo-list {
+    width: 80%;
+    height: 80%;
   }
 }

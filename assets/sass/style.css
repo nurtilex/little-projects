@@ -137,4 +137,41 @@ body {
   transform: scale(1.1);
 }
 
+@media only screen and (max-width: 480px) {
+  :root {
+    font-size: 11px;
+  }
+
+  .todo-list {
+    width: 85%;
+    height: 80%;
+  }
+
+  .input {
+    max-width: 76%;
+    width: auto;
+    padding-left: 5px;
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  :root {
+    font-size: 13px;
+  }
+
+  .todo-list {
+    width: 80%;
+    height: 80%;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    font-size: 13px;
+  }
+
+  .todo-list {
+    width: 80%;
+    height: 80%;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
