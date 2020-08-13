@@ -8,22 +8,47 @@
     <link rel="stylesheet" href="assets/sass/style.css" />
   </head>
   <body>
-    <!--To-Do List-->
-    <div class="todo-list">
-      <!--List-->
-      <ul class="list"></ul>
-      <!--List-->
+    <aside class="tools">
+      <button class="delete-all" type="submit" name="delete">Delete All</button>
+    </aside>
 
+
+    <div class="todo-list">
+      <ul class="list"></ul>
       <p class="no-tasks-message">Your list is empty</p>
       <input
         class="input"
         type="text"
-        placeholder="It should be at least 3 characters"
+        placeholder="Type..."
       />
       <button class="add-btn" type="submit">Add</button>
     </div>
 
-    <!--Template-->
+
+    <ul class="history"></ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <template id="history-item-template">
+      <li class="history-item">
+        <span class="history-item-name"></span>
+      </li>
+    </template>
+
     <template id="task-template">
       <li class="list-item">
         <label class="label-wrap">
