@@ -3,19 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>To-do App</title>
-    <!--Main-->
-    <link rel="stylesheet" href="assets/sass/style.css" />
+    <title>Simple ToDo App</title>
+    <link rel="stylesheet" href="assets/sass/css/style.css" />
   </head>
   <body>
-    <aside class="tools">
-      <button class="delete-all" type="submit" name="delete">Delete All</button>
-    </aside>
-
-
     <div class="todo-list">
       <ul class="list"></ul>
-      <p class="no-tasks-message">Your list is empty</p>
+      <p class="empty-list-message">Your list is empty</p>
       <input
         class="input"
         type="text"
@@ -23,31 +17,6 @@
       />
       <button class="add-btn" type="submit">Add</button>
     </div>
-
-
-    <ul class="history"></ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <template id="history-item-template">
-      <li class="history-item">
-        <span class="history-item-name"></span>
-      </li>
-    </template>
 
     <template id="task-template">
       <li class="list-item">
@@ -59,6 +28,6 @@
       </li>
     </template>
 
-    <script src="assets/js/script.js"></script>
+    <script defer src="assets/js/script.js"></script>
   </body>
 </html>

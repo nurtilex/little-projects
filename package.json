@@ -1,0 +1,29 @@
+{
+  "name": "to-do-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.26.10"
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "eslint ./assets/js/*.js --debug",
+    "fix": "eslint ./assets/js/*.js --fix",
+    "sass--write": "sass ./assets/sass/style.scss ./assets/sass/css/style.css",
+    "sass--watch": "sass ./assets/sass/style.scss ./assets/sass/css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurtilex/little-projects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurtilex/little-projects/issues"
+  },
+  "homepage": "https://github.com/nurtilex/little-projects#readme"
+}

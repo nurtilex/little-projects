@@ -1,36 +1,31 @@
-//todolist
 const list = document.querySelector('.list');
 const items = list.children;
-const emptyListMessage = document.querySelector('.no-tasks-message');
+
 const addBtn = document.querySelector('.add-btn');
 const input = document.querySelector('.input');
 
+const emptyListMessage = document.querySelector('.empty-list-message');
 
-//tools
-const deleteAllBtn = document.querySelector('.delete-all');
-
-//history
-const removeOnEvent = function (collection, btnSelector, event) {
-	Array.from(collection).forEach((item) => {
-		const btn = item.querySelector(btnSelector);
-		if (btnSelector === '.checkbox') {
-			btn.addEventListener(event, function () {
-				item.classList.add('btn-active');
-				setTimeout(function() {
-					item.remove();
-					items.length < 1 && emptyListMessage.classList.remove('hidden');
-					items.length <= 9 && list.classList.remove('vert-scroll');
-				}, 700);
-			});
-		} else {
-			btn.addEventListener(event, function () {
-				item.remove();
-				items.length < 1 && emptyListMessage.classList.remove('hidden');
-				items.length <= 9 && list.classList.remove('vert-scroll');
-			});
-		}
+function removeFinishedTask(task) {
+	const checkbox = task.querySelector('.checkbox');
+	checkbox.addEventListener('change', function () {
+		task.classList.add('checked');
+		setTimeout(function () {
+			task.remove();
+			items.length < 1 && emptyListMessage.classList.remove('hidden');
+			items.length <= 9 && list.classList.remove('vert-scroll');
+		}, 700);
 	});
-};
+}
+
+function deleteTask(task) {
+	const deleteBtn = task.querySelector('.delete-btn');
+	deleteBtn.addEventListener('click', () => {
+		task.remove();
+		items.length < 1 && emptyListMessage.classList.remove('hidden');
+		items.length <= 9 && list.classList.remove('vert-scroll');
+	});
+}
 
 
 addBtn.addEventListener('click', function () {
@@ -41,8 +36,8 @@ addBtn.addEventListener('click', function () {
 	if (input.value.length >= 3) {
 		taskDescription.textContent = input.value;
 		list.appendChild(task);
-		removeOnEvent([task], '.checkbox', 'change');
-		removeOnEvent([task], '.delete-btn', 'click');
+		removeFinishedTask(task);
+		deleteTask(task);
 		emptyListMessage.classList.add('hidden');
 		items.length > 9 && list.classList.add('vert-scroll');
 		input.value = '';
